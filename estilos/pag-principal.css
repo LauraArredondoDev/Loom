@@ -1,0 +1,88 @@
+/* HEADER */
+header{
+    background-image: url('/img/Cabecera.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    #contenido-cabecera {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        button {
+            background-color: #D6C1A8;
+            width: 150px;
+            height: 35px;
+            border: none;
+
+            a {
+                text-decoration: none; 
+            }
+        }
+
+        button:hover {
+            background-color: #C4A075;
+        }
+    }
+}
+/* FIN HEADER */
+
+/* TENDENCIAS */
+.tendencias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    /* margin-top: 30px; */
+}
+
+.card img {
+    height: 300px;
+}
+
+.card-body {
+    text-align: center;
+
+    h5, p{
+        margin-bottom: 8px;
+    }
+
+    .precio {
+        font-weight: bold;
+    }
+}
+
+.btn {
+    background-color: #D6C1A8;
+    color: black;
+    border: none;
+    border-radius: 0;
+}
+
+.btn:hover {
+    background-color: #C4A075;
+    color: black;
+}
+/* FIN TENDENCIAS */
+
+/* NOSOTROS */
+#nosotros{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center;
+    gap: 30px; */
+
+    p {
+        width: 50%;
+
+    }
+
+}
+/* FIN NOSOTROS */
