@@ -10,8 +10,64 @@ a {
     color: black;
 }
 
+a:hover {
+    font-weight: bold;
+}
+
 
 .navbar {
     background-color: #D6C1A8;
+
+    .nav-link {
+        color: black;
+    }
+
+    i {
+        font-size: 1.5em;
+        padding-right: 50px;
+        cursor: pointer;
+    }
 }
 
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #D6C1A8;
+    flex-wrap: wrap;
+
+    .contenedor-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-top: 15px;
+
+
+        h4 {
+            padding-bottom: 15px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            gap: 15px;
+
+            i {
+                font-size: 1.5em;
+            }
+        }
+    }
+    
+    #copy {
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+    }
+}
+/* FIN FOOTER */
