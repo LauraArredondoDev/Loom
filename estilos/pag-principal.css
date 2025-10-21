@@ -33,44 +33,6 @@ header{
 }
 /* FIN HEADER */
 
-/* TENDENCIAS */
-.tendencias {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.card img {
-    height: 300px;
-}
-
-.card-body {
-    text-align: center;
-
-    h5, p{
-        margin-bottom: 8px;
-    }
-
-    .precio {
-        font-weight: bold;
-    }
-}
-
-.btn {
-    background-color: #D6C1A8;
-    color: black;
-    border: none;
-    border-radius: 0;
-}
-
-.btn:hover {
-    background-color: #C4A075;
-    color: black;
-}
-/* FIN TENDENCIAS */
-
 /* NOSOTROS */
 #nosotros{
     display: flex;
