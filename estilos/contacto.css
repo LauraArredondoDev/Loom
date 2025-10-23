@@ -1,0 +1,62 @@
+.contenedor-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 15px;
+
+        i {
+            font-size: 1.5em;
+        }
+    }
+}
+
+#formulario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 20px;
+        width: 50%;
+
+
+        label {
+            width: 70px;
+        }
+
+        #btn {
+            padding: 5px 50px;
+        }
+
+        .mensaje-error {
+            display: none;
+        }
+    }
+}
+
+@media (width < 1200px) {
+    #formulario {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+    }
+}
