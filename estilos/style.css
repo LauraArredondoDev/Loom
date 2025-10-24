@@ -29,6 +29,29 @@ a:hover {
     }
 }
 
+#carrito {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.10);
+    z-index: 10;
+    padding: 20px;
+    
+    #cabecera-carrito {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+            margin: 0;
+        }
+    }
+}
+
 /* ESTILOS GENERALES DE LAS TARJETAS DE ROPA */
 .tendencias {
     display: flex;
@@ -75,42 +98,75 @@ a:hover {
 /* FOOTER */
 footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: start;
     background-color: #D6C1A8;
-    flex-wrap: wrap;
-
+    
     .contenedor-info {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: start;
-        padding-top: 15px;
+        padding: 20px 48px;
+        flex-wrap: wrap;
 
+        > div {
+            h4 {
+                padding-bottom: 15px;
+            }
 
-        h4 {
-            padding-bottom: 15px;
-        }
-
-        .info {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: start;
-            gap: 15px;
-
-            i {
-                font-size: 1.5em;
+            .info {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                gap: 15px;
+    
+                i {
+                    font-size: 1.5em;
+                }
             }
         }
+
     }
     
     #copy {
         display: flex;
         flex-direction: row;
-
+        justify-content: start;
+        align-items: center;
         width: 100%;
+        padding-bottom: 10px;
+
+        p {
+            font-size: small;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            width: 50%;
+            text-decoration: none;
+            font-size: small;
+        }
     }
 }
 /* FIN FOOTER */
+
+@media (width < 600px) {
+    #carrito {
+        width: 100%;
+        height: 100vh;
+        top: 0;
+    }
+}
+
+@media (width < 710px) {
+    footer .contenedor-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+} 
