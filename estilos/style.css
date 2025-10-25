@@ -4,6 +4,7 @@
 
 body {
     background-color: #F9F4EF;
+    overflow-x: hidden; /*Evita el scroll horizontal*/
 }
 
 a {
@@ -29,17 +30,19 @@ a:hover {
     }
 }
 
+/* CARRTIO COMPRA */
 #carrito {
-    position: absolute;
+    position: fixed; /*Se fija el carrito respecto a la ventana*/
     right: 0;
     top: 0;
     width: 350px;
     height: 100vh;
     background-color: white;
     box-shadow: -4px 0 12px rgba(0,0,0,0.10);
-    z-index: 10;
+    z-index: 150;
     padding: 20px;
-    
+    transition: all .3s ease;
+
     #cabecera-carrito {
         display: flex;
         flex-direction: row;
@@ -49,8 +52,25 @@ a:hover {
         h4 {
             margin: 0;
         }
+
+        i {
+            cursor: pointer;
+        }
+    }
+
+    #cuerpo-carrito {
+        overflow-y: scroll;
     }
 }
+
+.carrito-oculto {
+    margin-right: -350px;
+}
+
+.carrito-visible {
+    margin-right: 0;
+}
+/* FIN CARRITO COMPRA */
 
 /* ESTILOS GENERALES DE LAS TARJETAS DE ROPA */
 .tendencias {
