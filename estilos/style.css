@@ -59,7 +59,11 @@ a:hover {
     }
 
     #cuerpo-carrito {
-        overflow-y: scroll;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10px;
     }
 }
 
@@ -70,6 +74,27 @@ a:hover {
 .carrito-visible {
     margin-right: 0;
 }
+
+.carrito-item {
+    border: solid 2px black;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    .span-prenda {
+        font-weight: 600;
+    }
+
+    img {
+        height: 40px;
+        object-fit: contain;
+    }
+}
+
+
 /* FIN CARRITO COMPRA */
 
 /* ESTILOS GENERALES DE LAS TARJETAS DE ROPA */
