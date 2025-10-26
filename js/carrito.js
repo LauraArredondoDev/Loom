@@ -20,7 +20,7 @@ function añadirContenidoCarrito(nombre, precio, imgUrl) {
     divNuevo.appendChild(img);
 
     const spanPrenda = document.createElement('span');
-    spanPrenda.classList.add('pan-prenda');
+    spanPrenda.classList.add('span-prenda');
     spanPrenda.innerText = nombre || '';
     divNuevo.appendChild(spanPrenda);
 
@@ -39,10 +39,4 @@ function añadirContenidoCarrito(nombre, precio, imgUrl) {
 
 }
 
-/**
- * <img src="img/Vestido-gris.png">
-<span>Vestido de lana gris</span>
-<span>25,99€</span>
-<i class="fa-solid fa-trash"></i>
- */
 

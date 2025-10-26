@@ -80,18 +80,38 @@ a:hover {
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 8px;
-
-    .span-prenda {
-        font-weight: 600;
-    }
+    padding: 6px;
+    box-sizing: border-box;
 
     img {
+        width: 40px;
         height: 40px;
         object-fit: contain;
     }
+
+    .span-prenda {
+        flex: 1 1 auto;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .span-precio {
+        flex: 0 0 auto;
+        margin-left: 8px;
+        font-weight: 600;
+    }
+
+    i {
+        cursor: pointer;
+        flex: 0 0 auto;
+        margin-left: 8px;
+    }
+   
 }
 
 
