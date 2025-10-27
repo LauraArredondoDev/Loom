@@ -131,8 +131,13 @@ a:hover {
 }
 
 .card img {
-    height: 300px;
+    /* height: 300px;
+    object-fit: contain; */
+    width: 100%;
+    aspect-ratio: 4/3;
     object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 .card-body {
