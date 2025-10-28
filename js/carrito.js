@@ -34,9 +34,11 @@ function añadirContenidoCarrito(nombre, precio, imgUrl) {
     divNuevo.appendChild(iconoBasura);
 
     const cuerpoCarrito = document.getElementById('cuerpo-carrito');
-
     cuerpoCarrito.appendChild(divNuevo);
 
+    iconoBasura.addEventListener('click', () => {
+        divNuevo.remove();
+    });
 }
 
 
