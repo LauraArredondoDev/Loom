@@ -10,6 +10,24 @@ function ocultarCarrito() {
     carrito.classList.replace('carrito-visible', 'carrito-oculto');
 }
 
+function actualizarContador() {
+    const item = document.querySelectorAll('.carrito-item');
+    const contador = document.getElementById('contador-carrito');
+    
+    if(contador ) {
+        contador.innerText = item.length;
+    }
+
+    if(item.length > 0) {
+        contador.style.visibility = 'visible';
+        contador.style.opacity = '1'
+
+    }else {
+        contador.style.visibility = 'hidden';
+        contador.style.opacity = '0'
+    }
+}
+
 function añadirContenidoCarrito(nombre, precio, imgUrl) {
 
     const divNuevo = document.createElement('div');
@@ -44,10 +62,14 @@ function añadirContenidoCarrito(nombre, precio, imgUrl) {
         if(item.length === 0 && btnComprar) {
             btnComprar.remove();
         }
+
+        actualizarContador(); //Actualiza el contador al eliminar
     });
 
     const cuerpoCarrito = document.getElementById('cuerpo-carrito');
     cuerpoCarrito.appendChild(divNuevo);
+
+    actualizarContador(); //Actualiza el contador al añadir
 
     // Se comprueba si existe el botón de comprar y si no existe se crea.
     if(!cuerpoCarrito.querySelector('.btn-comprar')) {
@@ -63,7 +85,6 @@ function añadirContenidoCarrito(nombre, precio, imgUrl) {
         cuerpoCarrito.appendChild(btnComprarExistente);
     }
 
-    
 }
 
 

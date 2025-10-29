@@ -27,6 +27,7 @@ a:hover {
         font-size: 1.5em;
         padding-right: 50px;
         cursor: pointer;
+        position: relative; /*Para que el contador se posicione correctamente con el icono del carrito*/
     }
 }
 
@@ -119,6 +120,28 @@ a:hover {
     color: white;
     height: 40px;
 }
+
+#contador-carrito {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: 27px;
+    right: 27px;
+    font-size: x-small;
+    width: fit-content;
+    height: fit-content;
+    min-width: 0;
+    min-height: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* #contador-carrito:not(:empty) {
+    visibility: visible;
+    opacity: 1;
+} */
 
 
 /* FIN CARRITO COMPRA */
