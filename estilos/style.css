@@ -185,6 +185,17 @@ a:hover {
     background-color: #C4A075;
     color: black;
 }
+
+.btn.btn-card {
+    background-color: #D6C1A8;
+}
+
+.btn.btn-card:hover, .btn.btn-card:focus-visible {
+    background-color: #C4A075;
+}
+
+
+
 /* FIN ESTILOS GENERALES DE LAS TARJETAS DE ROPA */
 
 /* FOOTER */
