@@ -50,6 +50,21 @@
     }
 }
 
+#btn {
+    background-color: #D6C1A8;
+    color: black;
+    border: none;
+}
+
+#btn:hover {
+    background-color: #C4A075;
+    color: black;
+}
+
+#btn:hover, #btn:focus-visible {
+    background-color: #C4A075;
+}
+
 @media (width < 1200px) {
     #formulario {
         display: flex;
