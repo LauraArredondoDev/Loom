@@ -11,6 +11,7 @@ function comprobarCorreoCorrecto(idCampo) {
     }else { //Si el texto no tiene forma de correo
         campo.style.borderColor = 'red';
         spanCaracteresIncorrectosCorreo.style.display = 'block';
+        spanCaracteresIncorrectosCorreo.style.color = 'red';
         return false;
     }
 
@@ -22,13 +23,14 @@ function comprobarTelefonoCorrecto(idCampo) {
     const esTelefonoValido = /^\d{9}$/;
 
     if(esTelefonoValido.test(campo.value)) { //Si el teléfono tiene 9 números
-        caracteresIncorrectosTelefono.style.borderColor = '#dee2e6';
+        campo.style.borderColor = '#dee2e6';
         caracteresIncorrectosTelefono.style.display = 'none';
         return true;
 
     }else { //Si el teléfono no es válido 
-        caracteresIncorrectosTelefono.style.borderColor = 'red';
+        campo.style.borderColor = 'red';
         caracteresIncorrectosTelefono.style.display = 'block';
+        caracteresIncorrectosTelefono.style.color = 'red';
         return false;
     }
 }
@@ -79,21 +81,26 @@ function comprobarCampoVacio(idCampo) {
     }else { //Si el campo SI está vacío
         campo.style.borderColor = 'red';
 
-         switch(idCampo) {
+        switch(idCampo) {
             case 'input-nombre':
                 spanVacioNombre.style.display = 'block';
+                spanVacioNombre.style.color = 'red';
                 break;
             case 'input-apellidos':
                 spanVacioApellidos.style.display = 'block';
+                spanVacioApellidos.style.color = 'red';
                 break;
             case 'input-telefono':
                 spanVacioTelefono.style.display = 'block';
+                spanVacioTelefono.style.color = 'red';
                 break;
             case 'input-correo':
                 spanVacioCorreo.style.display = 'block';
+                spanVacioCorreo.style.color = 'red';
                 break;
             case 'input-mensaje':
                 spanVacioMensaje.style.display = 'block';
+                spanVacioMensaje.style.color = 'red';
                 break;
             default:
                 break;
@@ -118,7 +125,7 @@ function comprobarCampoCorrecto(idCampo) {
 }
 
 function enviarMail() {
-    const listaInputs = document.querySelectorAll('for input, form textarea');
+    const listaInputs = document.querySelectorAll('form input, form textarea');
     let deboEnviarMail = true;
 
     for(const input of listaInputs) { //se recorre la lista y si algún campo no es válido deboEnviarMail se cambia a false, si es correcto se deja en true y comprobamos el siguiente campo.
