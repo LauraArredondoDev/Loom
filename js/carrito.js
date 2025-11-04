@@ -123,12 +123,12 @@ function actualizarPrecioTotal() {
 
     listaPrecios.forEach(precioElemento => {
         const textoPrecio = precioElemento.innerText.replace('€', '').replace(',', '.').trim();
-        const numeroPrecio = parseFloat(textoPrecio); //Convierte el string del precio en número
+        const numeroPrecio = Number(textoPrecio); //Convierte el string del precio en número
 
-        if(Number.isFinite(numeroPrecio)) {
+        if(typeof(numeroPrecio) == 'number') {
             total += numeroPrecio;
         }
-    })
+    });
 
     const btnComprar = document.querySelector('.btn-comprar');
     if(btnComprar) {
