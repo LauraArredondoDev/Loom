@@ -56,6 +56,7 @@ function añadirContenidoCarrito(nombre, precio, imgUrl) {
         cuerpoCarrito.appendChild(btnComprarExistente);
     }
 
+    actualizarPrecioTotal();
 }
 
 function eliminarPrenda(idDiv) {
@@ -75,6 +76,8 @@ function eliminarPrenda(idDiv) {
     }
 
     actualizarContador(); //Actualiza el contador al eliminar
+
+    actualizarPrecioTotal();
 }
 
 function añadirImagen(imgUrl, divNuevo) {
@@ -113,3 +116,30 @@ function crearBotonComprarSiNoExiste(cuerpoCarrito) {
         cuerpoCarrito.appendChild(btnComprar);
     }
 }
+
+function actualizarPrecioTotal() {
+    const listaPrecios = document.querySelectorAll('.span-precio');
+    let total = 0;
+
+    listaPrecios.forEach(precioElemento => {
+        const textoPrecio = precioElemento.innerText.replace('€', '').replace(',', '.').trim();
+        const numeroPrecio = parseFloat(textoPrecio); //Convierte el string del precio en número
+
+        if(Number.isFinite(numeroPrecio)) {
+            total += numeroPrecio;
+        }
+    })
+
+    const btnComprar = document.querySelector('.btn-comprar');
+    if(btnComprar) {
+        if(total > 0) {
+            btnComprar.innerText = `Comprar ${total.toFixed(2)}€`;
+            //toFixed(2) redondea un número a 2 decimales y lo convierte en un string
+
+        }else {
+            btnComprar.innerText = 'Comprar';
+        }
+    }
+}
+
+
