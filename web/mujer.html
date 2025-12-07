@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="En Loom encontrarás las últimas tendencias en moda para hombre y mujer: vestidos, jerseys, pantalones, bolsos, zapatos y mucho más.">
+    <meta name="keywords" content="Tienda online de ropa, Ropa para hombre y mujer, Moda online, Tendencias, Complementos de moda, Ropa de hombre online, Ropa de mujer online">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/estilos/style.css">
+    <title>Loom</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand ps-4" href="/index.html">LOOM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/index.html
+                    ">Inicio</a>
+                    <a class="nav-link" href="/web/mujer.html">Mujer</a>
+                    <a class="nav-link" href="/web/hombre.html">Hombre</a>
+                    <a class="nav-link" href="/web/contacto.html">Contacto</a>
+                </div>
+            </div>
+            <i class="fa-solid fa-cart-shopping" onclick="mostrarCarrito()"></i>
+            <span id="contador-carrito"></span>
+        </div>
+    </nav>
+
+    <div id="carrito" class="carrito-oculto">
+        <div id="cabecera-carrito">
+            <h4>Carrito</h4>
+            <i class="fa-solid fa-xmark" onclick="ocultarCarrito()"></i>
+        </div>
+
+        <div id="cuerpo-carrito">
+
+        </div>
+    </div>
+
+    <section class="ps-5 pt-5 contenedor-tendencias">
+        <h4>Jerseys</h4>
+
+        <div class="tendencias mt-5 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="/img/jersey-blanco.png" class="card-img-top" alt="Jersey de lana blanco">
+                <div class="card-body">
+                    <h5 class="card-title">Jersey de lana blanco</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">35,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Jersey de lana blanco', '35,99€', '/img/jersey-blanco.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/jersey-burdeos.png" class="card-img-top" alt="Jersey de lana burdeos">
+                <div class="card-body">
+                    <h5 class="card-title">Jersey de lana burdeos</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">17,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Jersey de lana burdeos', '17,99€', '/img/jersey-burdeos.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/jersey-gris.png" class="card-img-top" alt="Jersey de lana gris">
+                <div class="card-body">
+                    <h5 class="card-title">Jersey de lana gris</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">19,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Jersey de lana gris', '19,99€', '/img/jersey-gris.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>Pantalones</h4>
+
+        <div class="tendencias mt-5 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="/img/pantalon-Beige-mujer.png" class="card-img-top" alt="Pantalón beige">
+                <div class="card-body">
+                    <h5 class="card-title">Pantalón beige</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">32,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Pantalón beige', '32,99€', '/img/pantalon-Beige-mujer.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/pantalon-marron-mujer.png" class="card-img-top" alt="Pantalón de pana marrón">
+                <div class="card-body">
+                    <h5 class="card-title">Pantalón de pana marrón</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">17,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Pantalón de pana marrón', '17,99€', '/img/pantalon-marron-mujer.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/pantalon-negro-mujer.png" class="card-img-top" alt="Pantalón de traje negro">
+                <div class="card-body">
+                    <h5 class="card-title">Pantalón de traje negro</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">25,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Pantalón de traje negro', '25,99€', '/img/pantalon-negro-mujer.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>Vestidos</h4>
+
+        <div class="tendencias mt-5 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="/img/vestido-gris.png" class="card-img-top" alt="Vestido de lana gris">
+                <div class="card-body">
+                    <h5 class="card-title">Vestido de lana gris</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">25,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Vestido de lana gris', '25,99€', '/img/vestido-gris.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/vestido-marron.png" class="card-img-top" alt="Vestido marrón">
+                <div class="card-body">
+                    <h5 class="card-title">Vestido marrón</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">17,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Vestido marrón', '17,99€', '/img/vestido-marron.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/vestido-granate.png" class="card-img-top" alt="Vestido de lana burdeos">
+                <div class="card-body">
+                    <h5 class="card-title">Vestido de lana burdeos</h5>
+                    <p class="card-text">Talla S-M-L</p>
+                    <p class="precio">25,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Vestido de lana burdeos', '25,99€', '/img/vestido-granate.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>Botas</h4>
+
+        <div class="tendencias mt-5 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="/img/botas-negras.png" class="card-img-top" alt="Botas de piel negras">
+                <div class="card-body">
+                    <h5 class="card-title">Botas de piel negras</h5>
+                    <p class="card-text">Talla 36-43</p>
+                    <p class="precio">49,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Botas de piel negras', '49,99€', '/img/botas-negras.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/botas-cowboy.png" class="card-img-top" alt="Botas cowboy marrones">
+                <div class="card-body">
+                    <h5 class="card-title">Botas cowboy marrones</h5>
+                    <p class="card-text">Talla 36-43</p>
+                    <p class="precio">28,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Botas cowboy marrones', '28,99€', '/img/botas-cowboy.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/botas-marrones.png" class="card-img-top" alt="Botas de ante marrones">
+                <div class="card-body">
+                    <h5 class="card-title">Botas de ante marrones</h5>
+                    <p class="card-text">Talla 36-43</p>
+                    <p class="precio">39,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Botas de ante marrones', '39,99€', '/img/botas-marrones.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>Deportivas</h4>
+
+        <div class="tendencias mt-5 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="/img/deportivas-mujer-gris.png" class="card-img-top" alt="Deportivas grises">
+                <div class="card-body">
+                    <h5 class="card-title">Deportivas grises</h5>
+                    <p class="card-text">Talla 36-43</p>
+                    <p class="precio">23,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Deportivas grises', '23,99€', '/img/deportivas-mujer-gris.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/deportiva-mujer-colores.png" class="card-img-top" alt="Deportivas de colores">
+                <div class="card-body">
+                    <h5 class="card-title">Deportivas de colores</h5>
+                    <p class="card-text">Talla 36-43</p>
+                    <p class="precio">19,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Deportivas de colores', '19,99€', '/img/deportiva-mujer-colores.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/deportivas-mujer-negras.png" class="card-img-top" alt="Deportivas negras">
+                <div class="card-body">
+                    <h5 class="card-title">Deportivas negras</h5>
+                    <p class="card-text">Talla 36-43</p>
+                    <p class="precio">25,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Deportivas negras', '25,99€', '/img/deportivas-mujer-negras.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>Cinturones</h4>
+
+        <div class="tendencias mt-5 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="/img/cinturon-marron-mujer.png" class="card-img-top" alt="Cinturón de piel marrón">
+                <div class="card-body">
+                    <h5 class="card-title">Cinturón de piel marrón</h5>
+                    <p class="card-text">Talla 32-54</p>
+                    <p class="precio">17,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Cinturón de piel marrón', '17,99€', '/img/cinturon-marron-mujer.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/cinturon-negro-mujer.png" class="card-img-top" alt="Cinturón de piel negro">
+                <div class="card-body">
+                    <h5 class="card-title">Cinturón de piel negro</h5>
+                    <p class="card-text">Talla 32-54</p>
+                    <p class="precio">19,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Cinturón de piel negro', '19,99€', '/img/cinturon-negro-mujer.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/cinturon-granate-mujer.png" class="card-img-top" alt="Cinturón de piel rojo">
+                <div class="card-body">
+                    <h5 class="card-title">Cinturón de piel rojo</h5>
+                    <p class="card-text">Talla 32-54</p>
+                    <p class="precio">23,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Cinturón de piel rojo', '23,99€', '/img/cinturon-granate-mujer.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>Bolsos</h4>
+
+        <div class="tendencias mt-5 mb-5">
+            <div class="card" style="width: 18rem;">
+                <img src="/img/bolso-negro.png" class="card-img-top" alt="Bolso de ante negro">
+                <div class="card-body">
+                    <h5 class="card-title">Bolso de ante negro</h5>
+                    <p class="card-text">Talla M</p>
+                    <p class="precio">15,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Bolso de ante negro', '15,99€', '/img/bolso-negro.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/bolso-marron.png" class="card-img-top" alt="Bolso de piel marrón">
+                <div class="card-body">
+                    <h5 class="card-title">Bolso de piel marrón</h5>
+                    <p class="card-text">Talla L</p>
+                    <p class="precio">28,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Bolso de piel marrón', '28,99€', '/img/bolso-marron.png')">Añadir al carrito</button>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+                <img src="/img/bolso-marron-claro.png" class="card-img-top" alt="Bolso de piel beige">
+                <div class="card-body">
+                    <h5 class="card-title">Bolso de piel beige</h5>
+                    <p class="card-text">Talla M</p>
+                    <p class="precio">19,99€</p>
+                    <button class="btn btn-card" onclick="añadirContenidoCarrito ('Bolso de piel beige', '19,99€', '/img/bolso-marron-claro.png')">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid">
+
+        <div class="contenedor-info">
+            <div>
+                <h4>Información de contacto</h4>
+
+                <div class="info">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>XXXXXXXXX</p>
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>atencionalclienteloom@gmail.com</p>
+                </div>
+
+                <div class="info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>C/ ejemplo 1, 28025, Madrid</p>
+                </div>
+            </div>
+
+            <div>
+                <h4>Horario de atención</h4>
+
+                <div class="info">
+                    <i class="fa-solid fa-clock"></i> 
+                    <p>Lunes a Sábado: 9:00-20:00</p>
+                </div>
+                
+                <div class="info">
+                    <i class="fa-solid fa-clock"></i>
+                    <p>Domingos: Cerrado</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="copy" class="ps-5">
+            <p id="copy">©Todos los derechos reservados. Loom 2025.</p>
+            <a href="#">Envíos y devoluciones</a>
+            <a href="#">Política de privacidad</a>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/js/carrito.js"></script>
+</body>
+</html>
